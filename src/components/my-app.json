@@ -1,0 +1,20 @@
+{
+  "meta": {},
+  "model": {
+    "app-header_1:app-toolbar:button": {
+      "title": "Menu"
+    }
+  },
+  "app-header_1:nav_1:a": "View One",
+  "app-header_1:nav_1:a_1": "View Two",
+  "app-header_1:nav_1:a_2": "View Three",
+  "app-drawer_2:nav:a": "View One",
+  "app-drawer_2:nav:a_1": "View Two",
+  "app-drawer_2:nav:a_2": "View Three",
+  "footer_4:p": "Made with ♥ by the Polymer team.",
+  "snack-bar_5": [
+    " You are now {1}.",
+    "{{parts.16}}"
+  ],
+  "appTitle": "my app"
+}

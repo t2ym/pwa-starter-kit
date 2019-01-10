@@ -8,7 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { html } from '@polymer/lit-element';
+import { html, bind } from 'i18n-element/i18n.js';
 import { PageViewElement } from './page-view-element.js';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 
@@ -16,7 +16,7 @@ import { connect } from 'pwa-helpers/connect-mixin.js';
 import { store } from '../store.js';
 
 // These are the actions needed by this element.
-import { checkout } from '../actions/shop.js';
+import { checkout, binding as getAllProductsBinding } from '../actions/shop.js';
 
 // We are lazy loading its reducer.
 import shop, { cartQuantitySelector } from '../reducers/shop.js';
@@ -34,8 +34,12 @@ import { ButtonSharedStyles } from './button-shared-styles.js';
 import { addToCartIcon } from './my-icons.js';
 
 class MyView3 extends connect(store)(PageViewElement) {
+  static get importMeta() {
+    return import.meta;
+  }
+
   render() {
-    return html`
+    return html`${bind(this, 'my-view3')}
       ${SharedStyles}
       ${ButtonSharedStyles}
       <style>
@@ -97,6 +101,11 @@ class MyView3 extends connect(store)(PageViewElement) {
     _quantity: { type: Number },
     _error: { type: String },
   }}
+
+  constructor() {
+    super();
+    getAllProductsBinding.element.addEventListener('lang-updated', this._langUpdated.bind(this));
+  }
 
   _checkoutButtonClicked() {
     store.dispatch(checkout());

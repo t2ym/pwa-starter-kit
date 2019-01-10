@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "todo": []
+  },
+  "model": {
+    "app-header_1:app-toolbar:button": {
+      "title": "ja Menu"
+    }
+  },
+  "app-header_1:nav_1:a": "ja View One",
+  "app-header_1:nav_1:a_1": "ja View Two",
+  "app-header_1:nav_1:a_2": "ja View Three",
+  "app-drawer_2:nav:a": "ja View One",
+  "app-drawer_2:nav:a_1": "ja View Two",
+  "app-drawer_2:nav:a_2": "ja View Three",
+  "footer_4:p": "ja Made with ♥ by the Polymer team.",
+  "snack-bar_5": [
+    "ja You are now {1}.",
+    "{{parts.16}}"
+  ],
+  "appTitle": "ja my app"
+}

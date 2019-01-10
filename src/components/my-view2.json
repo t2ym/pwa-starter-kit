@@ -1,0 +1,9 @@
+{
+  "meta": {},
+  "model": {},
+  "section_1:h2": "Redux example: simple counter",
+  "section_1:p_2": [
+    "This page contains a reusable {1}. The\n        element is not built in a Redux-y way (you can think of it as being a\n        third-party element you got from someone else), but this page is connected to the\n        Redux store. When the element updates its counter, this page updates the values\n        in the Redux store, and you can see the current value of the counter reflected in\n        the bubble above.",
+    "<counter-element>"
+  ]
+}

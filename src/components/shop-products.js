@@ -8,7 +8,8 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { LitElement, html } from '@polymer/lit-element';
+import { LitElement } from '@polymer/lit-element';
+import { html, i18n, bind } from 'i18n-element/i18n.js';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 
 // This element is connected to the Redux store.
@@ -26,9 +27,13 @@ import { addToCartIcon } from './my-icons.js';
 // These are the shared styles needed by this element.
 import { ButtonSharedStyles } from './button-shared-styles.js';
 
-class ShopProducts extends connect(store)(LitElement) {
+class ShopProducts extends connect(store)(i18n(LitElement)) {
+  static get importMeta() {
+    return import.meta;
+  }
+
   render() {
-    return html`
+    return html`${bind(this, 'shop-products')}
       ${ButtonSharedStyles}
       <style>
         :host { display: block; }
@@ -42,18 +47,32 @@ class ShopProducts extends connect(store)(LitElement) {
                 .disabled="${item.inventory === 0}"
                 @click="${this._addButtonClicked}"
                 data-index="${item.id}"
-                title="${item.inventory === 0 ? 'Sold out' : 'Add to cart' }">
-              ${item.inventory === 0 ? 'Sold out': addToCartIcon }
+                title="${item.inventory === 0 ? this.text.sold_out : this.text.add_to_cart }">
+              ${item.inventory === 0 ? this.text.sold_out : addToCartIcon }
             </button>
           </div>
         `
       })}
+      <template>
+        <span id="sold_out">Sold out</span>
+        <span id="add_to_cart">Add to cart</span>
+      </template>
     `;
   }
 
   static get properties() { return {
     _products: { type: Object }
   }}
+
+  constructor() {
+    super();
+    this.addEventListener('lang-updated', this._langUpdated);
+  }
+
+  _langUpdated(event) {
+    this.langUpdated = this.lang;
+    this.firstUpdated();
+  }
 
   firstUpdated() {
     store.dispatch(getAllProducts());

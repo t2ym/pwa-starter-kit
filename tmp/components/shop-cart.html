@@ -1,0 +1,24 @@
+<!-- temporary HTML --><html><head><link rel="import" href="../../../i18n-element.html"></head><body><dom-module id="shop-cart"><template localizable-text="embedded">
+      {{parts.0}}
+      <style>
+        :host { display: block; }
+      </style>
+      <p ?hidden="{{parts.1}}">{{text.p_2}}</p>
+      {{parts.2}}
+      <p ?hidden="{{parts.3}}"><i18n-format lang="{{effectiveLang}}"><span>{{text.p_4.0}}</span><b slot="1">{{text.p_4.1}}</b><span slot="2">{{parts.4}}</span></i18n-format></p>
+    <template id="localizable-text">
+<json-data>
+{
+  "meta": {},
+  "model": {},
+  "p_2": "Please add some products to cart.",
+  "p_4": [
+    "{1} {2}",
+    "Total:",
+    "{{parts.4}}"
+  ]
+}
+</json-data>
+</template>
+</template></dom-module><!-- end of dom-module id="shop-cart" -->
+</body></html>

@@ -8,12 +8,17 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { LitElement, html } from '@polymer/lit-element';
+import { LitElement } from '@polymer/lit-element';
+import { html, i18n, bind } from 'i18n-element/i18n.js';
 
 // This element is *not* connected to the Redux store.
-class ShopItem extends LitElement {
+class ShopItem extends i18n(LitElement) {
+  static get importMeta() {
+    return import.meta;
+  }
+
   render() {
-    return html`
+    return html`${bind(this, 'shop-item')}
       ${this.name}:
       <span ?hidden="${this.amount === 0}">${this.amount} * </span>
       $${this.price}
@@ -23,10 +28,20 @@ class ShopItem extends LitElement {
 
   static get properties() {
     return {
+      langUpdated: { type: String },
       name: { type: String },
       amount: { type: String },
       price: { type: String }
     }
+  }
+
+  constructor() {
+    super();
+    this.addEventListener('lang-updated', this._langUpdated);
+  }
+
+  _langUpdated(event) {
+    this.langUpdated = this.lang;
   }
 }
 

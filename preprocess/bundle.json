@@ -1,0 +1,201 @@
+{
+  "counter-element": {
+    "meta": {
+      "locales": [
+        "ja"
+      ]
+    },
+    "model": {
+      "div_2:p:3": {
+        "title": "Add 1"
+      },
+      "div_2:p:4": {
+        "title": "Minus 1"
+      }
+    },
+    "div_2:p": [
+      " Clicked: {1} times.\n          Value is {2}.\n          {3}\n          {4} ",
+      "{{parts.1}}",
+      "{{parts.2}}",
+      "{{parts.4}}",
+      "{{parts.6}}"
+    ]
+  },
+  "get-all-products": {
+    "meta": {
+      "locales": [
+        "ja"
+      ]
+    },
+    "model": {},
+    "PRODUCT_LIST": [
+      {
+        "id": 1,
+        "title": "Cabot Creamery Extra Sharp Cheddar Cheese",
+        "price": 10.99,
+        "inventory": 2
+      },
+      {
+        "id": 2,
+        "title": "Cowgirl Creamery Mt. Tam Cheese",
+        "price": 29.99,
+        "inventory": 10
+      },
+      {
+        "id": 3,
+        "title": "Tillamook Medium Cheddar Cheese",
+        "price": 8.99,
+        "inventory": 5
+      },
+      {
+        "id": 4,
+        "title": "Point Reyes Bay Blue Cheese",
+        "price": 24.99,
+        "inventory": 7
+      },
+      {
+        "id": 5,
+        "title": "Shepherd's Halloumi Cheese",
+        "price": 11.99,
+        "inventory": 3
+      }
+    ]
+  },
+  "my-app": {
+    "meta": {
+      "locales": [
+        "ja"
+      ]
+    },
+    "model": {
+      "app-header_1:app-toolbar:button": {
+        "title": "Menu"
+      }
+    },
+    "app-header_1:nav_1:a": "View One",
+    "app-header_1:nav_1:a_1": "View Two",
+    "app-header_1:nav_1:a_2": "View Three",
+    "app-drawer_2:nav:a": "View One",
+    "app-drawer_2:nav:a_1": "View Two",
+    "app-drawer_2:nav:a_2": "View Three",
+    "footer_4:p": "Made with ♥ by the Polymer team.",
+    "snack-bar_5": [
+      " You are now {1}.",
+      "{{parts.16}}"
+    ],
+    "appTitle": "my app"
+  },
+  "my-view1": {
+    "meta": {
+      "locales": [
+        "ja"
+      ]
+    },
+    "model": {},
+    "section_1:h2": "Static page",
+    "section_1:p_1": "This is a text-only page.",
+    "section_1:p_2": "It doesn't do anything other than display some static text.",
+    "section_2:h2": "Welcome",
+    "section_2:p_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac nisi orci. Maecenas sollicitudin diam in diam efficitur cursus. Morbi sollicitudin in justo tincidunt placerat. Integer tincidunt elementum nisi, eu ornare dolor lacinia eget. Fusce pulvinar massa eget odio placerat, commodo molestie ipsum tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse porttitor id purus eu cursus. Suspendisse arcu nulla, mattis vel hendrerit et, malesuada a elit. Nam at diam ornare, aliquet est sed, malesuada metus. Cras nec enim vel nibh tincidunt euismod ut et enim. Etiam pharetra eros in sodales iaculis. Duis sagittis urna et cursus mollis. Cras tempor rutrum est. Praesent sollicitudin ligula at laoreet placerat. Praesent tortor dui, semper in sapien non, pharetra luctus turpis.",
+    "section_3:p": "Vestibulum at est ex. Aenean id ligula id nibh dictum laoreet. Etiam non semper erat. Pellentesque eu justo rhoncus diam vulputate facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat metus ex, vel fringilla massa tincidunt sit amet. Nunc facilisis bibendum tristique. Mauris commodo, dolor vitae dapibus fermentum, odio nibh viverra lorem, eu cursus diam turpis et sapien. Nunc suscipit tortor a ligula tincidunt, id hendrerit tellus sollicitudin."
+  },
+  "my-view2": {
+    "meta": {
+      "locales": [
+        "ja"
+      ]
+    },
+    "model": {},
+    "section_1:h2": "Redux example: simple counter",
+    "section_1:p_2": [
+      "This page contains a reusable {1}. The\n        element is not built in a Redux-y way (you can think of it as being a\n        third-party element you got from someone else), but this page is connected to the\n        Redux store. When the element updates its counter, this page updates the values\n        in the Redux store, and you can see the current value of the counter reflected in\n        the bubble above.",
+      "<counter-element>"
+    ]
+  },
+  "my-view3": {
+    "meta": {
+      "locales": [
+        "ja"
+      ]
+    },
+    "model": {},
+    "text": [
+      " {1}\n      {2} ",
+      "{{parts.0}}",
+      "{{parts.1}}"
+    ],
+    "section_2:h2": "Redux example: shopping cart",
+    "section_2:div_1": [
+      "{1}{2}",
+      "{{parts.2}}",
+      "{{parts.3}}"
+    ],
+    "section_2:p_2": "This is a slightly more advanced Redux example, that simulates a\n          shopping cart: getting the products, adding/removing items to the\n          cart, and a checkout action, that can sometimes randomly fail (to\n          simulate where you would add failure handling). ",
+    "section_2:p_3": [
+      "This view, as well as its 2 child elements, {1} and\n        {2} are connected to the Redux store.",
+      "<shop-products>",
+      "<shop-cart>"
+    ],
+    "section_3:h3": "Products",
+    "section_3:h3_3": "Your Cart",
+    "section_3:p_7:button": " Checkout "
+  },
+  "my-view404": {
+    "meta": {
+      "locales": [
+        "ja"
+      ]
+    },
+    "model": {},
+    "section_1:h2": "Oops! You hit a 404",
+    "section_1:p_1": [
+      "The page you're looking for doesn't seem to exist. Head back\n           {1} and try again? ",
+      "home"
+    ]
+  },
+  "shop-cart": {
+    "meta": {
+      "locales": [
+        "ja"
+      ]
+    },
+    "model": {},
+    "p_2": "Please add some products to cart.",
+    "p_4": [
+      "{1} {2}",
+      "Total:",
+      "{{parts.4}}"
+    ]
+  },
+  "shop-item": {
+    "meta": {
+      "locales": [
+        "ja"
+      ]
+    },
+    "model": {},
+    "text": [
+      " {1}: ",
+      "{{parts.0}}"
+    ],
+    "span_1": [
+      "{1} * ",
+      "{{parts.2}}"
+    ],
+    "text_2": [
+      " ${1} ",
+      "{{parts.3}}"
+    ]
+  },
+  "shop-products": {
+    "meta": {
+      "locales": [
+        "ja"
+      ]
+    },
+    "model": {},
+    "sold_out": "Sold out",
+    "add_to_cart": "Add to cart"
+  },
+  "bundle": true
+}

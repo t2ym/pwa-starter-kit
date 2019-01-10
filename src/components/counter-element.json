@@ -1,0 +1,18 @@
+{
+  "meta": {},
+  "model": {
+    "div_2:p:3": {
+      "title": "Add 1"
+    },
+    "div_2:p:4": {
+      "title": "Minus 1"
+    }
+  },
+  "div_2:p": [
+    " Clicked: {1} times.\n          Value is {2}.\n          {3}\n          {4} ",
+    "{{parts.1}}",
+    "{{parts.2}}",
+    "{{parts.4}}",
+    "{{parts.6}}"
+  ]
+}

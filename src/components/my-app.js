@@ -8,7 +8,8 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { LitElement, html } from '@polymer/lit-element';
+import { LitElement } from '@polymer/lit-element';
+import { html, i18n, bind } from 'i18n-element/i18n.js';
 import { setPassiveTouchGestures } from '@polymer/polymer/lib/utils/settings.js';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 import { installMediaQueryWatcher } from 'pwa-helpers/media-query.js';
@@ -34,10 +35,14 @@ import '@polymer/app-layout/app-toolbar/app-toolbar.js';
 import { menuIcon } from './my-icons.js';
 import './snack-bar.js';
 
-class MyApp extends connect(store)(LitElement) {
+class MyApp extends connect(store)(i18n(LitElement)) {
+  static get importMeta() {
+    return import.meta;
+  }
+
   render() {
     // Anything that's related to rendering should be done in here.
-    return html`
+    return html`${bind(this)}
     <style>
       :host {
         --app-drawer-width: 256px;
@@ -218,11 +223,13 @@ class MyApp extends connect(store)(LitElement) {
 
     <snack-bar ?active="${this._snackbarOpened}">
         You are now ${this._offline ? 'offline' : 'online'}.</snack-bar>
+    <template><span id="appTitle">my app</span></template>
     `;
   }
 
   static get properties() {
     return {
+      langUpdated: { type: String },
       appTitle: { type: String },
       _page: { type: String },
       _drawerOpened: { type: Boolean },
@@ -236,6 +243,12 @@ class MyApp extends connect(store)(LitElement) {
     // To force all event listeners for gestures to be passive.
     // See https://www.polymer-project.org/3.0/docs/devguide/settings#setting-passive-touch-gestures
     setPassiveTouchGestures(true);
+    this.addEventListener('lang-updated', this._langUpdated);
+  }
+
+  _langUpdated(event) {
+    this.langUpdated = this.lang;
+    this.appTitle = this.text.appTitle;
   }
 
   firstUpdated() {

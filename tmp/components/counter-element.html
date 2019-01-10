@@ -1,0 +1,32 @@
+<!-- temporary HTML --><html><head><link rel="import" href="../../../i18n-element.html"></head><body><dom-module id="counter-element"><template localizable-text="embedded">
+      {{parts.0}}
+      <style>
+        span { width: 20px; display: inline-block; text-align: center; font-weight: bold;}
+      </style>
+      <div>
+        <p><i18n-format lang="{{effectiveLang}}"><span>{{text.div_2:p.0}}</span><span slot="1">{{parts.1}}</span><span slot="2">{{parts.2}}</span><button @click="{{parts.3}}" title="{{model.div_2:p:3.title}}" slot="3">{{parts.4}}</button><button @click="{{parts.5}}" title="{{model.div_2:p:4.title}}" slot="4">{{parts.6}}</button></i18n-format></p>
+      </div>
+    <template id="localizable-text">
+<json-data>
+{
+  "meta": {},
+  "model": {
+    "div_2:p:3": {
+      "title": "Add 1"
+    },
+    "div_2:p:4": {
+      "title": "Minus 1"
+    }
+  },
+  "div_2:p": [
+    " Clicked: {1} times.\n          Value is {2}.\n          {3}\n          {4} ",
+    "{{parts.1}}",
+    "{{parts.2}}",
+    "{{parts.4}}",
+    "{{parts.6}}"
+  ]
+}
+</json-data>
+</template>
+</template></dom-module><!-- end of dom-module id="counter-element" -->
+</body></html>

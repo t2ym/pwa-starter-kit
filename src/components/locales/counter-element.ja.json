@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "todo": []
+  },
+  "model": {
+    "div_2:p:3": {
+      "title": "ja Add 1"
+    },
+    "div_2:p:4": {
+      "title": "ja Minus 1"
+    }
+  },
+  "div_2:p": [
+    "ja Clicked: {1} times.\n          Value is {2}.\n          {3}\n          {4} ",
+    "{{parts.1}}",
+    "{{parts.2}}",
+    "{{parts.4}}",
+    "{{parts.6}}"
+  ]
+}

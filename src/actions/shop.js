@@ -7,6 +7,7 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
+import { html, i18n, bind } from 'i18n-element/i18n.js';
 
 export const GET_PRODUCTS = 'GET_PRODUCTS';
 export const ADD_TO_CART = 'ADD_TO_CART';
@@ -14,13 +15,18 @@ export const REMOVE_FROM_CART = 'REMOVE_FROM_CART';
 export const CHECKOUT_SUCCESS = 'CHECKOUT_SUCCESS';
 export const CHECKOUT_FAILURE = 'CHECKOUT_FAILURE';
 
-const PRODUCT_LIST = [
-  {"id": 1, "title": "Cabot Creamery Extra Sharp Cheddar Cheese", "price": 10.99, "inventory": 2},
-  {"id": 2, "title": "Cowgirl Creamery Mt. Tam Cheese", "price": 29.99, "inventory": 10},
-  {"id": 3, "title": "Tillamook Medium Cheddar Cheese", "price": 8.99, "inventory": 5},
-  {"id": 4, "title": "Point Reyes Bay Blue Cheese", "price": 24.99, "inventory": 7},
-  {"id": 5, "title": "Shepherd's Halloumi Cheese", "price": 11.99, "inventory": 3}
-];
+export const binding = bind('get-all-products', import.meta);
+
+html`${'get-all-products', binding}
+<template>
+  <json-data id="PRODUCT_LIST">[
+    {"id": 1, "title": "Cabot Creamery Extra Sharp Cheddar Cheese", "price": 10.99, "inventory": 2},
+    {"id": 2, "title": "Cowgirl Creamery Mt. Tam Cheese", "price": 29.99, "inventory": 10},
+    {"id": 3, "title": "Tillamook Medium Cheddar Cheese", "price": 8.99, "inventory": 5},
+    {"id": 4, "title": "Point Reyes Bay Blue Cheese", "price": 24.99, "inventory": 7},
+    {"id": 5, "title": "Shepherd's Halloumi Cheese", "price": 11.99, "inventory": 3}
+  ]</json-data>
+</template>`;
 
 export const getAllProducts = () => (dispatch) => {
   // Here you would normally get the data from the server. We're simulating
@@ -28,7 +34,7 @@ export const getAllProducts = () => (dispatch) => {
   // succesfully got the data back)
 
   // You could reformat the data in the right format as well:
-  const products = PRODUCT_LIST.reduce((obj, product) => {
+  const products = binding.element.text.PRODUCT_LIST.reduce((obj, product) => {
     obj[product.id] = product
     return obj
   }, {});

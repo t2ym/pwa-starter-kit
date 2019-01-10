@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "todo": []
+  },
+  "model": {},
+  "text": [
+    " {1}\n      {2} ",
+    "{{parts.0}}",
+    "{{parts.1}}"
+  ],
+  "section_2:h2": "ja Redux example: shopping cart",
+  "section_2:div_1": [
+    "{1}{2}",
+    "{{parts.2}}",
+    "{{parts.3}}"
+  ],
+  "section_2:p_2": "ja This is a slightly more advanced Redux example, that simulates a\n          shopping cart: getting the products, adding/removing items to the\n          cart, and a checkout action, that can sometimes randomly fail (to\n          simulate where you would add failure handling). ",
+  "section_2:p_3": [
+    "ja This view, as well as its 2 child elements, {1} and\n        {2} are connected to the Redux store.",
+    "ja <shop-products>",
+    "ja <shop-cart>"
+  ],
+  "section_3:h3": "ja Products",
+  "section_3:h3_3": "ja Your Cart",
+  "section_3:p_7:button": "ja  Checkout "
+}

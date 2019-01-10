@@ -8,7 +8,8 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { LitElement, html } from '@polymer/lit-element';
+import { LitElement } from '@polymer/lit-element';
+import { html, i18n, bind } from 'i18n-element/i18n.js';
 
 // These are the elements needed by this element.
 import { plusIcon, minusIcon } from './my-icons.js';
@@ -19,9 +20,13 @@ import { ButtonSharedStyles } from './button-shared-styles.js';
 // This is a reusable element. It is not connected to the store. You can
 // imagine that it could just as well be a third-party element that you
 // got from someone else.
-class CounterElement extends LitElement {
+class CounterElement extends i18n(LitElement) {
+  static get importMeta() {
+    return import.meta;
+  }
+
   render() {
-    return html`
+    return html`${bind(this, 'counter-element')}
       ${ButtonSharedStyles}
       <style>
         span { width: 20px; display: inline-block; text-align: center; font-weight: bold;}
@@ -38,6 +43,7 @@ class CounterElement extends LitElement {
   }
 
   static get properties() { return {
+    langUpdated: { type: String },
     /* The total number of clicks you've done. */
     clicks: { type: Number },
     /* The current value of the counter. */
@@ -48,6 +54,11 @@ class CounterElement extends LitElement {
     super();
     this.clicks = 0;
     this.value = 0;
+    this.addEventListener('lang-updated', this._langUpdated);
+  }
+
+  _langUpdated(event) {
+    this.langUpdated = this.lang;
   }
 
   _onIncrement() {
