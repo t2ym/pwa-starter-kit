@@ -1,6 +1,6 @@
 {
   "name": "pwa-starter-kit",
-  "version": "0.9.0-i18n.2",
+  "version": "0.9.0-i18n.3",
   "contributors": [
     "The Polymer Authors"
   ],
@@ -20,10 +20,10 @@
   },
   "dependencies": {
     "@polymer/app-layout": "^3.0.0",
-    "@polymer/lit-element": "0.6.5",
     "@polymer/polymer": "^3.1.0",
     "@webcomponents/webcomponentsjs": "^2.0.0",
-    "i18n-element": "^3.0.0-pre.14-lit-html.8.6",
+    "i18n-element": "^3.0.0-pre.18-lit-html.9",
+    "lit-element": "^2.0.0-rc.2",
     "pwa-helpers": "^0.9.0",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",

@@ -7,7 +7,10 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
-import { LitElement } from '@polymer/lit-element';
+import {
+  LitElement,
+  css
+} from 'lit-element';
 import {
   html,
   i18n,
@@ -22,11 +25,30 @@ class CounterElement extends i18n(LitElement) {
   static get importMeta() {
     return import.meta;
   }
+  static get properties() {
+    return {
+      langUpdated: { type: String },
+      clicks: { type: Number },
+      value: { type: Number }
+    };
+  }
+  static get styles() {
+    return [
+      ButtonSharedStyles,
+      css`
+        span {
+          width: 20px;
+          display: inline-block;
+          text-align: center;
+          font-weight: bold;
+        }
+      `
+    ];
+  }
   render() {
     return html([
       '<!-- localizable -->',
-      '\n      ',
-      '\n      <style>\n        span { width: 20px; display: inline-block; text-align: center; font-weight: bold;}\n      </style>\n      <div>\n        <p><i18n-format lang="',
+      '\n      <div>\n        <p><i18n-format lang="',
       '"><span>',
       '</span><span slot="1">',
       '</span><span slot="2">',
@@ -39,38 +61,30 @@ class CounterElement extends i18n(LitElement) {
       '</button></i18n-format></p>\n      </div>\n    '
     ], ...bind(this, 'counter-element', (_bind, text, model, effectiveLang) => [
       _bind,
-      ButtonSharedStyles,
       effectiveLang,
-      text['div_2:p']['0'],
+      text['div:p']['0'],
       this.clicks,
       this.value,
       this._onIncrement,
-      model['div_2:p:3']['title'],
+      model['div:p:3']['title'],
       plusIcon,
       this._onDecrement,
-      model['div_2:p:4']['title'],
+      model['div:p:4']['title'],
       minusIcon
     ], {
       'meta': {},
       'model': {
-        'div_2:p:3': { 'title': 'Add 1' },
-        'div_2:p:4': { 'title': 'Minus 1' }
+        'div:p:3': { 'title': 'Add 1' },
+        'div:p:4': { 'title': 'Minus 1' }
       },
-      'div_2:p': [
+      'div:p': [
         ' Clicked: {1} times.\n          Value is {2}.\n          {3}\n          {4} ',
+        '{{parts.0}}',
         '{{parts.1}}',
-        '{{parts.2}}',
-        '{{parts.4}}',
-        '{{parts.6}}'
+        '{{parts.3}}',
+        '{{parts.5}}'
       ]
     }));
-  }
-  static get properties() {
-    return {
-      langUpdated: { type: String },
-      clicks: { type: Number },
-      value: { type: Number }
-    };
   }
   constructor() {
     super();

@@ -8,7 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { LitElement } from '@polymer/lit-element';
+import { LitElement, css } from 'lit-element';
 import { html, i18n, bind } from 'i18n-element/i18n.js';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 
@@ -33,12 +33,26 @@ class ShopCart extends connect(store)(i18n(LitElement)) {
     return import.meta;
   }
 
+  static get properties() {
+    return {
+      _items: { type: Array },
+      _total: { type: Number }
+    };
+  }
+
+  static get styles() {
+    return [
+      ButtonSharedStyles,
+      css`
+        :host {
+          display: block;
+        }
+      `
+    ];
+  }
+
   render() {
     return html`${bind(this, 'shop-cart')}
-      ${ButtonSharedStyles}
-      <style>
-        :host { display: block; }
-      </style>
       <p ?hidden="${this._items.length !== 0}">Please add some products to cart.</p>
       ${this._items.map((item) =>
         html`
@@ -56,12 +70,6 @@ class ShopCart extends connect(store)(i18n(LitElement)) {
       <p ?hidden="${!this._items.length}"><b>Total:</b> ${this._total}</p>
     `;
   }
-
-  static get properties() { return {
-    langUpdated: { type: String },
-    _items: { type: Array },
-    _total: { type: Number }
-  }}
 
   constructor() {
     super();

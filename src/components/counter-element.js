@@ -8,7 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { LitElement } from '@polymer/lit-element';
+import { LitElement, css } from 'lit-element';
 import { html, i18n, bind } from 'i18n-element/i18n.js';
 
 // These are the elements needed by this element.
@@ -25,12 +25,30 @@ class CounterElement extends i18n(LitElement) {
     return import.meta;
   }
 
+  static get properties() { return {
+    langUpdated: { type: String },
+    /* The total number of clicks you've done. */
+    clicks: { type: Number },
+    /* The current value of the counter. */
+    value: { type: Number }
+  }};
+
+  static get styles() {
+    return [
+      ButtonSharedStyles,
+      css`
+        span {
+          width: 20px;
+          display: inline-block;
+          text-align: center;
+          font-weight: bold;
+        }
+      `
+    ];
+  }
+
   render() {
     return html`${bind(this, 'counter-element')}
-      ${ButtonSharedStyles}
-      <style>
-        span { width: 20px; display: inline-block; text-align: center; font-weight: bold;}
-      </style>
       <div>
         <p>
           Clicked: <span>${this.clicks}</span> times.
@@ -42,13 +60,6 @@ class CounterElement extends i18n(LitElement) {
     `;
   }
 
-  static get properties() { return {
-    langUpdated: { type: String },
-    /* The total number of clicks you've done. */
-    clicks: { type: Number },
-    /* The current value of the counter. */
-    value: { type: Number }
-  }};
 
   constructor() {
     super();

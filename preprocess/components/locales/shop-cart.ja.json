@@ -3,10 +3,10 @@
     "todo": []
   },
   "model": {},
-  "p_2": "ja Please add some products to cart.",
-  "p_4": [
+  "p": "ja Please add some products to cart.",
+  "p_2": [
     "{1} {2}",
     "ja Total:",
-    "{{parts.4}}"
+    "{{parts.3}}"
   ]
 }

@@ -7,6 +7,7 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
+import { css } from 'lit-element';
 import {
   html,
   bind
@@ -29,14 +30,50 @@ class MyView3 extends connect(store)(PageViewElement) {
   static get importMeta() {
     return import.meta;
   }
+  static get properties() {
+    return {
+      _quantity: { type: Number },
+      _error: { type: String }
+    };
+  }
+  static get styles() {
+    return [
+      SharedStyles,
+      ButtonSharedStyles,
+      css`
+        button {
+          border: 2px solid var(--app-dark-text-color);
+          border-radius: 3px;
+          padding: 8px 16px;
+        }
+
+        button:hover {
+          border-color: var(--app-primary-color);
+          color: var(--app-primary-color);
+        }
+
+        .cart,
+        .cart svg {
+          fill: var(--app-primary-color);
+          width: 64px;
+          height: 64px;
+        }
+
+        .circle.small {
+          margin-top: -72px;
+          width: 28px;
+          height: 28px;
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 30px;
+        }
+      `
+    ];
+  }
   render() {
     return html([
       '<!-- localizable -->',
-      '<i18n-format lang="',
-      '"><span>',
-      '</span><span slot="1">',
-      '</span><span slot="2">',
-      '</span></i18n-format><style>\n        button {\n          border: 2px solid var(--app-dark-text-color);\n          border-radius: 3px;\n          padding: 8px 16px;\n        }\n        button:hover {\n          border-color: var(--app-primary-color);\n          color: var(--app-primary-color);\n        }\n        .cart, .cart svg {\n          fill: var(--app-primary-color);\n          width: 64px;\n          height: 64px;\n        }\n        .circle.small {\n          margin-top: -72px;\n          width: 28px;\n          height: 28px;\n          font-size: 16px;\n          font-weight: bold;\n          line-height: 30px;\n        }\n      </style>\n\n      <section>\n        <h2>',
+      '\n      <section>\n        <h2>',
       '</h2>\n        <div class="cart"><i18n-format lang="',
       '"><span>',
       '</span><span slot="1">',
@@ -55,56 +92,41 @@ class MyView3 extends connect(store)(PageViewElement) {
       '</button>\n        </p>\n      </section>\n    '
     ], ...bind(this, 'my-view3', (_bind, text, model, effectiveLang) => [
       _bind,
+      text['section:h2'],
       effectiveLang,
-      text['text']['0'],
-      SharedStyles,
-      ButtonSharedStyles,
-      text['section_2:h2'],
-      effectiveLang,
-      text['section_2:div_1']['0'],
+      text['section:div_1']['0'],
       addToCartIcon,
       this._quantity,
-      text['section_2:p_2'],
+      text['section:p_2'],
       effectiveLang,
-      text['section_2:p_3']['0'],
-      text['section_2:p_3']['1'],
-      text['section_2:p_3']['2'],
-      text['section_3:h3'],
-      text['section_3:h3_3'],
+      text['section:p_3']['0'],
+      text['section:p_3']['1'],
+      text['section:p_3']['2'],
+      text['section_1:h3'],
+      text['section_1:h3_3'],
       this._error,
       this._quantity == 0,
       this._checkoutButtonClicked,
-      text['section_3:p_7:button']
+      text['section_1:p_7:button']
     ], {
       'meta': {},
       'model': {},
-      'text': [
-        ' {1}\n      {2} ',
+      'section:h2': 'Redux example: shopping cart',
+      'section:div_1': [
+        '{1}{2}',
         '{{parts.0}}',
         '{{parts.1}}'
       ],
-      'section_2:h2': 'Redux example: shopping cart',
-      'section_2:div_1': [
-        '{1}{2}',
-        '{{parts.2}}',
-        '{{parts.3}}'
-      ],
-      'section_2:p_2': 'This is a slightly more advanced Redux example, that simulates a\n          shopping cart: getting the products, adding/removing items to the\n          cart, and a checkout action, that can sometimes randomly fail (to\n          simulate where you would add failure handling). ',
-      'section_2:p_3': [
+      'section:p_2': 'This is a slightly more advanced Redux example, that simulates a\n          shopping cart: getting the products, adding/removing items to the\n          cart, and a checkout action, that can sometimes randomly fail (to\n          simulate where you would add failure handling). ',
+      'section:p_3': [
         'This view, as well as its 2 child elements, {1} and\n        {2} are connected to the Redux store.',
         '&lt;shop-products&gt;',
         '&lt;shop-cart&gt;'
       ],
-      'section_3:h3': 'Products',
-      'section_3:h3_3': 'Your Cart',
-      'section_3:p_7:button': ' Checkout '
+      'section_1:h3': 'Products',
+      'section_1:h3_3': 'Your Cart',
+      'section_1:p_7:button': ' Checkout '
     }));
-  }
-  static get properties() {
-    return {
-      _quantity: { type: Number },
-      _error: { type: String }
-    };
   }
   constructor() {
     super();

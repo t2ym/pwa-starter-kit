@@ -7,7 +7,10 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
-import { LitElement } from '@polymer/lit-element';
+import {
+  LitElement,
+  css
+} from 'lit-element';
 import {
   html,
   i18n,
@@ -26,17 +29,28 @@ class ShopProducts extends connect(store)(i18n(LitElement)) {
   static get importMeta() {
     return import.meta;
   }
+  static get properties() {
+    return { _products: { type: Object } };
+  }
+  static get styles() {
+    return [
+      ButtonSharedStyles,
+      css`
+        :host {
+          display: block;
+        }
+      `
+    ];
+  }
   render() {
     return html([
       '<!-- localizable -->',
       '\n      ',
-      '\n      <style>\n        :host { display: block; }\n      </style>\n      ',
       '\n      <template>\n        <span id="sold_out">',
       '</span>\n        <span id="add_to_cart">',
       '</span>\n      </template>\n    '
     ], ...bind(this, 'shop-products', (_bind, text, model, effectiveLang) => [
       _bind,
-      ButtonSharedStyles,
       Object.keys(this._products).map(key => {
         const item = this._products[key];
         return html`
@@ -60,9 +74,6 @@ class ShopProducts extends connect(store)(i18n(LitElement)) {
       'sold_out': 'Sold out',
       'add_to_cart': 'Add to cart'
     }));
-  }
-  static get properties() {
-    return { _products: { type: Object } };
   }
   constructor() {
     super();

@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
 <xliff version="1.0">
-  <file xml:space="default" source-language="en" target-language="ja" datatype="plaintext" original="messages" date="2019-01-10T07:13:21Z" product-name="messages">
+  <file xml:space="default" source-language="en" target-language="ja" datatype="plaintext" original="messages" date="2019-01-12T02:38:43Z" product-name="messages">
     <header>
       <tool tool-id="xliff-conv" tool-name="xliff-conv" tool-version="1.0.11"/>
     </header>
     <body>
-      <trans-unit id="counter-element.model.div_2:p:3.title" approved="yes">
+      <trans-unit id="counter-element.model.div:p:3.title" approved="yes">
         <source>Add 1</source>
         <target state="translated">ja Add 1</target>
       </trans-unit>
-      <trans-unit id="counter-element.model.div_2:p:4.title" approved="yes">
+      <trans-unit id="counter-element.model.div:p:4.title" approved="yes">
         <source>Minus 1</source>
         <target state="translated">ja Minus 1</target>
       </trans-unit>
-      <trans-unit id="counter-element.div_2:p.0" approved="yes">
+      <trans-unit id="counter-element.div:p.0" approved="yes">
         <source> Clicked: {1} times.
           Value is {2}.
           {3}
           {4} </source>
-        <target state="translated">ja Clicked: {1} times.
+        <target state="translated">ja  Clicked: {1} times.
           Value is {2}.
           {3}
           {4} </target>
       </trans-unit>
-      <trans-unit id="counter-element.div_2:p.1" approved="yes">
+      <trans-unit id="counter-element.div:p.1" approved="yes">
+        <source>{{parts.0}}</source>
+        <target state="translated">{{parts.0}}</target>
+      </trans-unit>
+      <trans-unit id="counter-element.div:p.2" approved="yes">
         <source>{{parts.1}}</source>
         <target state="translated">{{parts.1}}</target>
       </trans-unit>
-      <trans-unit id="counter-element.div_2:p.2" approved="yes">
-        <source>{{parts.2}}</source>
-        <target state="translated">{{parts.2}}</target>
+      <trans-unit id="counter-element.div:p.3" approved="yes">
+        <source>{{parts.3}}</source>
+        <target state="translated">{{parts.3}}</target>
       </trans-unit>
-      <trans-unit id="counter-element.div_2:p.3" approved="yes">
-        <source>{{parts.4}}</source>
-        <target state="translated">{{parts.4}}</target>
-      </trans-unit>
-      <trans-unit id="counter-element.div_2:p.4" approved="yes">
-        <source>{{parts.6}}</source>
-        <target state="translated">{{parts.6}}</target>
+      <trans-unit id="counter-element.div:p.4" approved="yes">
+        <source>{{parts.5}}</source>
+        <target state="translated">{{parts.5}}</target>
       </trans-unit>
       <trans-unit id="get-all-products.PRODUCT_LIST.0.id" restype="x-json-number" approved="yes">
         <source>1</source>
@@ -120,43 +120,43 @@
         <source>3</source>
         <target state="translated">3</target>
       </trans-unit>
-      <trans-unit id="my-app.model.app-header_1:app-toolbar:button.title" approved="yes">
+      <trans-unit id="my-app.model.app-header:app-toolbar:button.title" approved="yes">
         <source>Menu</source>
         <target state="translated">ja Menu</target>
       </trans-unit>
-      <trans-unit id="my-app.app-header_1:nav_1:a" approved="yes">
+      <trans-unit id="my-app.app-header:nav_1:a" approved="yes">
         <source>View One</source>
         <target state="translated">ja View One</target>
       </trans-unit>
-      <trans-unit id="my-app.app-header_1:nav_1:a_1" approved="yes">
+      <trans-unit id="my-app.app-header:nav_1:a_1" approved="yes">
         <source>View Two</source>
         <target state="translated">ja View Two</target>
       </trans-unit>
-      <trans-unit id="my-app.app-header_1:nav_1:a_2" approved="yes">
+      <trans-unit id="my-app.app-header:nav_1:a_2" approved="yes">
         <source>View Three</source>
         <target state="translated">ja View Three</target>
       </trans-unit>
-      <trans-unit id="my-app.app-drawer_2:nav:a" approved="yes">
+      <trans-unit id="my-app.app-drawer_1:nav:a" approved="yes">
         <source>View One</source>
         <target state="translated">ja View One</target>
       </trans-unit>
-      <trans-unit id="my-app.app-drawer_2:nav:a_1" approved="yes">
+      <trans-unit id="my-app.app-drawer_1:nav:a_1" approved="yes">
         <source>View Two</source>
         <target state="translated">ja View Two</target>
       </trans-unit>
-      <trans-unit id="my-app.app-drawer_2:nav:a_2" approved="yes">
+      <trans-unit id="my-app.app-drawer_1:nav:a_2" approved="yes">
         <source>View Three</source>
         <target state="translated">ja View Three</target>
       </trans-unit>
-      <trans-unit id="my-app.footer_4:p" approved="yes">
+      <trans-unit id="my-app.footer_3:p" approved="yes">
         <source>Made with ♥ by the Polymer team.</source>
         <target state="translated">ja Made with ♥ by the Polymer team.</target>
       </trans-unit>
-      <trans-unit id="my-app.snack-bar_5.0" approved="yes">
-        <source> You are now {1}.</source>
-        <target state="translated">ja You are now {1}.</target>
+      <trans-unit id="my-app.snack-bar_4.0" approved="yes">
+        <source> You are now {1}. </source>
+        <target state="translated">ja  You are now {1}. </target>
       </trans-unit>
-      <trans-unit id="my-app.snack-bar_5.1" approved="yes">
+      <trans-unit id="my-app.snack-bar_4.1" approved="yes">
         <source>{{parts.16}}</source>
         <target state="translated">{{parts.16}}</target>
       </trans-unit>
@@ -164,35 +164,35 @@
         <source>my app</source>
         <target state="translated">ja my app</target>
       </trans-unit>
-      <trans-unit id="my-view1.section_1:h2" approved="yes">
+      <trans-unit id="my-view1.section:h2" approved="yes">
         <source>Static page</source>
         <target state="translated">ja Static page</target>
       </trans-unit>
-      <trans-unit id="my-view1.section_1:p_1" approved="yes">
+      <trans-unit id="my-view1.section:p_1" approved="yes">
         <source>This is a text-only page.</source>
         <target state="translated">ja This is a text-only page.</target>
       </trans-unit>
-      <trans-unit id="my-view1.section_1:p_2" approved="yes">
+      <trans-unit id="my-view1.section:p_2" approved="yes">
         <source>It doesn't do anything other than display some static text.</source>
         <target state="translated">ja It doesn't do anything other than display some static text.</target>
       </trans-unit>
-      <trans-unit id="my-view1.section_2:h2" approved="yes">
+      <trans-unit id="my-view1.section_1:h2" approved="yes">
         <source>Welcome</source>
         <target state="translated">ja Welcome</target>
       </trans-unit>
-      <trans-unit id="my-view1.section_2:p_1" approved="yes">
+      <trans-unit id="my-view1.section_1:p_1" approved="yes">
         <source>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac nisi orci. Maecenas sollicitudin diam in diam efficitur cursus. Morbi sollicitudin in justo tincidunt placerat. Integer tincidunt elementum nisi, eu ornare dolor lacinia eget. Fusce pulvinar massa eget odio placerat, commodo molestie ipsum tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse porttitor id purus eu cursus. Suspendisse arcu nulla, mattis vel hendrerit et, malesuada a elit. Nam at diam ornare, aliquet est sed, malesuada metus. Cras nec enim vel nibh tincidunt euismod ut et enim. Etiam pharetra eros in sodales iaculis. Duis sagittis urna et cursus mollis. Cras tempor rutrum est. Praesent sollicitudin ligula at laoreet placerat. Praesent tortor dui, semper in sapien non, pharetra luctus turpis.</source>
         <target state="translated">ja Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac nisi orci. Maecenas sollicitudin diam in diam efficitur cursus. Morbi sollicitudin in justo tincidunt placerat. Integer tincidunt elementum nisi, eu ornare dolor lacinia eget. Fusce pulvinar massa eget odio placerat, commodo molestie ipsum tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse porttitor id purus eu cursus. Suspendisse arcu nulla, mattis vel hendrerit et, malesuada a elit. Nam at diam ornare, aliquet est sed, malesuada metus. Cras nec enim vel nibh tincidunt euismod ut et enim. Etiam pharetra eros in sodales iaculis. Duis sagittis urna et cursus mollis. Cras tempor rutrum est. Praesent sollicitudin ligula at laoreet placerat. Praesent tortor dui, semper in sapien non, pharetra luctus turpis.</target>
       </trans-unit>
-      <trans-unit id="my-view1.section_3:p" approved="yes">
+      <trans-unit id="my-view1.section_2:p" approved="yes">
         <source>Vestibulum at est ex. Aenean id ligula id nibh dictum laoreet. Etiam non semper erat. Pellentesque eu justo rhoncus diam vulputate facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat metus ex, vel fringilla massa tincidunt sit amet. Nunc facilisis bibendum tristique. Mauris commodo, dolor vitae dapibus fermentum, odio nibh viverra lorem, eu cursus diam turpis et sapien. Nunc suscipit tortor a ligula tincidunt, id hendrerit tellus sollicitudin.</source>
         <target state="translated">ja Vestibulum at est ex. Aenean id ligula id nibh dictum laoreet. Etiam non semper erat. Pellentesque eu justo rhoncus diam vulputate facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat metus ex, vel fringilla massa tincidunt sit amet. Nunc facilisis bibendum tristique. Mauris commodo, dolor vitae dapibus fermentum, odio nibh viverra lorem, eu cursus diam turpis et sapien. Nunc suscipit tortor a ligula tincidunt, id hendrerit tellus sollicitudin.</target>
       </trans-unit>
-      <trans-unit id="my-view2.section_1:h2" approved="yes">
+      <trans-unit id="my-view2.section:h2" approved="yes">
         <source>Redux example: simple counter</source>
         <target state="translated">ja Redux example: simple counter</target>
       </trans-unit>
-      <trans-unit id="my-view2.section_1:p_2.0" approved="yes">
+      <trans-unit id="my-view2.section:p_2.0" approved="yes">
         <source>This page contains a reusable {1}. The
         element is not built in a Redux-y way (you can think of it as being a
         third-party element you got from someone else), but this page is connected to the
@@ -206,41 +206,27 @@
         in the Redux store, and you can see the current value of the counter reflected in
         the bubble above.</target>
       </trans-unit>
-      <trans-unit id="my-view2.section_1:p_2.1" approved="yes">
+      <trans-unit id="my-view2.section:p_2.1" approved="yes">
         <source>&lt;counter-element></source>
         <target state="translated">ja &lt;counter-element></target>
       </trans-unit>
-      <trans-unit id="my-view3.text.0" approved="yes">
-        <source> {1}
-      {2} </source>
-        <target state="translated"> {1}
-      {2} </target>
-      </trans-unit>
-      <trans-unit id="my-view3.text.1" approved="yes">
-        <source>{{parts.0}}</source>
-        <target state="translated">{{parts.0}}</target>
-      </trans-unit>
-      <trans-unit id="my-view3.text.2" approved="yes">
-        <source>{{parts.1}}</source>
-        <target state="translated">{{parts.1}}</target>
-      </trans-unit>
-      <trans-unit id="my-view3.section_2:h2" approved="yes">
+      <trans-unit id="my-view3.section:h2" approved="yes">
         <source>Redux example: shopping cart</source>
         <target state="translated">ja Redux example: shopping cart</target>
       </trans-unit>
-      <trans-unit id="my-view3.section_2:div_1.0" approved="yes">
+      <trans-unit id="my-view3.section:div_1.0" approved="yes">
         <source>{1}{2}</source>
         <target state="translated">{1}{2}</target>
       </trans-unit>
-      <trans-unit id="my-view3.section_2:div_1.1" approved="yes">
-        <source>{{parts.2}}</source>
-        <target state="translated">{{parts.2}}</target>
+      <trans-unit id="my-view3.section:div_1.1" approved="yes">
+        <source>{{parts.0}}</source>
+        <target state="translated">{{parts.0}}</target>
       </trans-unit>
-      <trans-unit id="my-view3.section_2:div_1.2" approved="yes">
-        <source>{{parts.3}}</source>
-        <target state="translated">{{parts.3}}</target>
+      <trans-unit id="my-view3.section:div_1.2" approved="yes">
+        <source>{{parts.1}}</source>
+        <target state="translated">{{parts.1}}</target>
       </trans-unit>
-      <trans-unit id="my-view3.section_2:p_2" approved="yes">
+      <trans-unit id="my-view3.section:p_2" approved="yes">
         <source>This is a slightly more advanced Redux example, that simulates a
           shopping cart: getting the products, adding/removing items to the
           cart, and a checkout action, that can sometimes randomly fail (to
@@ -250,65 +236,65 @@
           cart, and a checkout action, that can sometimes randomly fail (to
           simulate where you would add failure handling). </target>
       </trans-unit>
-      <trans-unit id="my-view3.section_2:p_3.0" approved="yes">
+      <trans-unit id="my-view3.section:p_3.0" approved="yes">
         <source>This view, as well as its 2 child elements, {1} and
         {2} are connected to the Redux store.</source>
         <target state="translated">ja This view, as well as its 2 child elements, {1} and
         {2} are connected to the Redux store.</target>
       </trans-unit>
-      <trans-unit id="my-view3.section_2:p_3.1" approved="yes">
+      <trans-unit id="my-view3.section:p_3.1" approved="yes">
         <source>&lt;shop-products></source>
         <target state="translated">ja &lt;shop-products></target>
       </trans-unit>
-      <trans-unit id="my-view3.section_2:p_3.2" approved="yes">
+      <trans-unit id="my-view3.section:p_3.2" approved="yes">
         <source>&lt;shop-cart></source>
         <target state="translated">ja &lt;shop-cart></target>
       </trans-unit>
-      <trans-unit id="my-view3.section_3:h3" approved="yes">
+      <trans-unit id="my-view3.section_1:h3" approved="yes">
         <source>Products</source>
         <target state="translated">ja Products</target>
       </trans-unit>
-      <trans-unit id="my-view3.section_3:h3_3" approved="yes">
+      <trans-unit id="my-view3.section_1:h3_3" approved="yes">
         <source>Your Cart</source>
         <target state="translated">ja Your Cart</target>
       </trans-unit>
-      <trans-unit id="my-view3.section_3:p_7:button" approved="yes">
+      <trans-unit id="my-view3.section_1:p_7:button" approved="yes">
         <source> Checkout </source>
         <target state="translated">ja  Checkout </target>
       </trans-unit>
-      <trans-unit id="my-view404.section_1:h2" approved="yes">
+      <trans-unit id="my-view404.section:h2" approved="yes">
         <source>Oops! You hit a 404</source>
         <target state="translated">ja Oops! You hit a 404</target>
       </trans-unit>
-      <trans-unit id="my-view404.section_1:p_1.0" approved="yes">
-        <source>The page you're looking for doesn't seem to exist. Head back
-           {1} and try again? </source>
-        <target state="translated">ja The page you're looking for doesn't seem to exist. Head back
-           {1} and try again? </target>
+      <trans-unit id="my-view404.section:p_1.0" approved="yes">
+        <source> The page you're looking for doesn't seem to exist. Head back
+          {1} and try again? </source>
+        <target state="translated">ja  The page you're looking for doesn't seem to exist. Head back
+          {1} and try again? </target>
       </trans-unit>
-      <trans-unit id="my-view404.section_1:p_1.1" approved="yes">
+      <trans-unit id="my-view404.section:p_1.1" approved="yes">
         <source>home</source>
         <target state="translated">ja home</target>
       </trans-unit>
-      <trans-unit id="shop-cart.p_2" approved="yes">
+      <trans-unit id="shop-cart.p" approved="yes">
         <source>Please add some products to cart.</source>
         <target state="translated">ja Please add some products to cart.</target>
       </trans-unit>
-      <trans-unit id="shop-cart.p_4.0" approved="yes">
+      <trans-unit id="shop-cart.p_2.0" approved="yes">
         <source>{1} {2}</source>
         <target state="translated">{1} {2}</target>
       </trans-unit>
-      <trans-unit id="shop-cart.p_4.1" approved="yes">
+      <trans-unit id="shop-cart.p_2.1" approved="yes">
         <source>Total:</source>
         <target state="translated">ja Total:</target>
       </trans-unit>
-      <trans-unit id="shop-cart.p_4.2" approved="yes">
-        <source>{{parts.4}}</source>
-        <target state="translated">{{parts.4}}</target>
+      <trans-unit id="shop-cart.p_2.2" approved="yes">
+        <source>{{parts.3}}</source>
+        <target state="translated">{{parts.3}}</target>
       </trans-unit>
       <trans-unit id="shop-item.text.0" approved="yes">
         <source> {1}: </source>
-        <target state="translated">{1}: </target>
+        <target state="translated"> {1}: </target>
       </trans-unit>
       <trans-unit id="shop-item.text.1" approved="yes">
         <source>{{parts.0}}</source>
@@ -324,7 +310,7 @@
       </trans-unit>
       <trans-unit id="shop-item.text_2.0" approved="yes">
         <source> ${1} </source>
-        <target state="translated">${1} </target>
+        <target state="translated"> ${1} </target>
       </trans-unit>
       <trans-unit id="shop-item.text_2.1" approved="yes">
         <source>{{parts.3}}</source>

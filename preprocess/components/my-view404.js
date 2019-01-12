@@ -17,10 +17,12 @@ class MyView404 extends PageViewElement {
   static get importMeta() {
     return import.meta;
   }
+  static get styles() {
+    return [SharedStyles];
+  }
   render() {
     return html([
       '<!-- localizable -->',
-      '\n      ',
       '\n      <section>\n        <h2>',
       '</h2>\n        <p><i18n-format lang="',
       '"><span>',
@@ -28,17 +30,16 @@ class MyView404 extends PageViewElement {
       '</a></i18n-format></p>\n      </section>\n    '
     ], ...bind(this, 'my-view404', (_bind, text, model, effectiveLang) => [
       _bind,
-      SharedStyles,
-      text['section_1:h2'],
+      text['section:h2'],
       effectiveLang,
-      text['section_1:p_1']['0'],
-      text['section_1:p_1']['1']
+      text['section:p_1']['0'],
+      text['section:p_1']['1']
     ], {
       'meta': {},
       'model': {},
-      'section_1:h2': 'Oops! You hit a 404',
-      'section_1:p_1': [
-        'The page you\'re looking for doesn\'t seem to exist. Head back\n           {1} and try again? ',
+      'section:h2': 'Oops! You hit a 404',
+      'section:p_1': [
+        ' The page you\'re looking for doesn\'t seem to exist. Head back\n          {1} and try again? ',
         'home'
       ]
     }));

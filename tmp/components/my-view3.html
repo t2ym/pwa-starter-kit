@@ -1,46 +1,22 @@
-<!-- temporary HTML --><html><head><link rel="import" href="../../../i18n-element.html"></head><body><dom-module id="my-view3"><template localizable-text="embedded"><i18n-format lang="{{effectiveLang}}"><span>{{text.text.0}}</span><span slot="1">{{parts.0}}</span><span slot="2">{{parts.1}}</span></i18n-format><style>
-        button {
-          border: 2px solid var(--app-dark-text-color);
-          border-radius: 3px;
-          padding: 8px 16px;
-        }
-        button:hover {
-          border-color: var(--app-primary-color);
-          color: var(--app-primary-color);
-        }
-        .cart, .cart svg {
-          fill: var(--app-primary-color);
-          width: 64px;
-          height: 64px;
-        }
-        .circle.small {
-          margin-top: -72px;
-          width: 28px;
-          height: 28px;
-          font-size: 16px;
-          font-weight: bold;
-          line-height: 30px;
-        }
-      </style>
-
+<!-- temporary HTML --><html><head><link rel="import" href="../../../i18n-element.html"></head><body><dom-module id="my-view3"><template localizable-text="embedded">
       <section>
-        <h2>{{text.section_2:h2}}</h2>
-        <div class="cart"><i18n-format lang="{{effectiveLang}}"><span>{{text.section_2:div_1.0}}</span><span slot="1">{{parts.2}}</span><div class="circle small" slot="2">{{parts.3}}</div></i18n-format></div>
-        <p>{{text.section_2:p_2}}</p>
-        <p><i18n-format lang="{{effectiveLang}}"><span>{{text.section_2:p_3.0}}</span><code slot="1">{{text.section_2:p_3.1}}</code><code slot="2">{{text.section_2:p_3.2}}</code></i18n-format></p>
+        <h2>{{text.section:h2}}</h2>
+        <div class="cart"><i18n-format lang="{{effectiveLang}}"><span>{{text.section:div_1.0}}</span><span slot="1">{{parts.0}}</span><div class="circle small" slot="2">{{parts.1}}</div></i18n-format></div>
+        <p>{{text.section:p_2}}</p>
+        <p><i18n-format lang="{{effectiveLang}}"><span>{{text.section:p_3.0}}</span><code slot="1">{{text.section:p_3.1}}</code><code slot="2">{{text.section:p_3.2}}</code></i18n-format></p>
       </section>
       <section>
-        <h3>{{text.section_3:h3}}</h3>
+        <h3>{{text.section_1:h3}}</h3>
         <shop-products></shop-products>
 
         <br>
-        <h3>{{text.section_3:h3_3}}</h3>
+        <h3>{{text.section_1:h3_3}}</h3>
         <shop-cart></shop-cart>
 
-        <div>{{parts.4}}</div>
+        <div>{{parts.2}}</div>
         <br>
         <p>
-          <button ?hidden="{{parts.5}}" @click="{{parts.6}}">{{text.section_3:p_7:button}}</button>
+          <button ?hidden="{{parts.3}}" @click="{{parts.4}}">{{text.section_1:p_7:button}}</button>
         </p>
       </section>
     <template id="localizable-text">
@@ -48,26 +24,21 @@
 {
   "meta": {},
   "model": {},
-  "text": [
-    " {1}\n      {2} ",
+  "section:h2": "Redux example: shopping cart",
+  "section:div_1": [
+    "{1}{2}",
     "{{parts.0}}",
     "{{parts.1}}"
   ],
-  "section_2:h2": "Redux example: shopping cart",
-  "section_2:div_1": [
-    "{1}{2}",
-    "{{parts.2}}",
-    "{{parts.3}}"
-  ],
-  "section_2:p_2": "This is a slightly more advanced Redux example, that simulates a\n          shopping cart: getting the products, adding/removing items to the\n          cart, and a checkout action, that can sometimes randomly fail (to\n          simulate where you would add failure handling). ",
-  "section_2:p_3": [
+  "section:p_2": "This is a slightly more advanced Redux example, that simulates a\n          shopping cart: getting the products, adding/removing items to the\n          cart, and a checkout action, that can sometimes randomly fail (to\n          simulate where you would add failure handling). ",
+  "section:p_3": [
     "This view, as well as its 2 child elements, {1} and\n        {2} are connected to the Redux store.",
     "&lt;shop-products&gt;",
     "&lt;shop-cart&gt;"
   ],
-  "section_3:h3": "Products",
-  "section_3:h3_3": "Your Cart",
-  "section_3:p_7:button": " Checkout "
+  "section_1:h3": "Products",
+  "section_1:h3_3": "Your Cart",
+  "section_1:p_7:button": " Checkout "
 }
 </json-data>
 </template>

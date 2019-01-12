@@ -1,10 +1,10 @@
 {
   "meta": {},
   "model": {},
-  "p_2": "Please add some products to cart.",
-  "p_4": [
+  "p": "Please add some products to cart.",
+  "p_2": [
     "{1} {2}",
     "Total:",
-    "{{parts.4}}"
+    "{{parts.3}}"
   ]
 }

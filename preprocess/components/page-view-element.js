@@ -8,7 +8,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
 
-import { LitElement } from '@polymer/lit-element';
+import { LitElement } from 'lit-element';
 import { i18n } from 'i18n-element/i18n.js';
 
 export class PageViewElement extends i18n(LitElement) {
@@ -29,7 +29,7 @@ export class PageViewElement extends i18n(LitElement) {
   }
 
   constructor() {
-  	super();
+    super();
     this.addEventListener('lang-updated', this._langUpdated);
   }
 

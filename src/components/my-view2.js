@@ -35,9 +35,22 @@ class MyView2 extends connect(store)(PageViewElement) {
     return import.meta;
   }
 
+  static get properties() {
+    return {
+      // This is the data from the store.
+      _clicks: { type: Number },
+      _value: { type: Number }
+    };
+  }
+
+  static get styles() {
+    return [
+      SharedStyles
+    ];
+  }
+
   render() {
     return html`${bind(this, 'my-view2')}
-      ${SharedStyles}
       <section>
         <h2>Redux example: simple counter</h2>
         <div class="circle">${this._value}</div>
@@ -51,7 +64,9 @@ class MyView2 extends connect(store)(PageViewElement) {
       </section>
       <section>
         <p>
-          <counter-element value="${this._value}" clicks="${this._clicks}"
+          <counter-element
+              value="${this._value}"
+              clicks="${this._clicks}"
               @counter-incremented="${this._counterIncremented}"
               @counter-decremented="${this._counterDecremented}">
           </counter-element>
@@ -59,12 +74,6 @@ class MyView2 extends connect(store)(PageViewElement) {
       </section>
     `;
   }
-
-  static get properties() { return {
-    // This is the data from the store.
-    _clicks: { type: Number },
-    _value: { type: Number },
-  }}
 
   _counterIncremented() {
     store.dispatch(increment());

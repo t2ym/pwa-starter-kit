@@ -7,7 +7,10 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
-import { LitElement } from '@polymer/lit-element';
+import {
+  LitElement,
+  css
+} from 'lit-element';
 import {
   html,
   i18n,
@@ -27,11 +30,26 @@ class ShopCart extends connect(store)(i18n(LitElement)) {
   static get importMeta() {
     return import.meta;
   }
+  static get properties() {
+    return {
+      _items: { type: Array },
+      _total: { type: Number }
+    };
+  }
+  static get styles() {
+    return [
+      ButtonSharedStyles,
+      css`
+        :host {
+          display: block;
+        }
+      `
+    ];
+  }
   render() {
     return html([
       '<!-- localizable -->',
-      '\n      ',
-      '\n      <style>\n        :host { display: block; }\n      </style>\n      <p ?hidden="',
+      '\n      <p ?hidden="',
       '">',
       '</p>\n      ',
       '\n      <p ?hidden="',
@@ -42,9 +60,8 @@ class ShopCart extends connect(store)(i18n(LitElement)) {
       '</span></i18n-format></p>\n    '
     ], ...bind(this, 'shop-cart', (_bind, text, model, effectiveLang) => [
       _bind,
-      ButtonSharedStyles,
       this._items.length !== 0,
-      text['p_2'],
+      text['p'],
       this._items.map(item => html`
           <div>
             <shop-item .name="${ item.title }" .amount="${ item.amount }" .price="${ item.price }"></shop-item>
@@ -58,26 +75,19 @@ class ShopCart extends connect(store)(i18n(LitElement)) {
         `),
       !this._items.length,
       effectiveLang,
-      text['p_4']['0'],
-      text['p_4']['1'],
+      text['p_2']['0'],
+      text['p_2']['1'],
       this._total
     ], {
       'meta': {},
       'model': {},
-      'p_2': 'Please add some products to cart.',
-      'p_4': [
+      'p': 'Please add some products to cart.',
+      'p_2': [
         '{1} {2}',
         'Total:',
-        '{{parts.4}}'
+        '{{parts.3}}'
       ]
     }));
-  }
-  static get properties() {
-    return {
-      langUpdated: { type: String },
-      _items: { type: Array },
-      _total: { type: Number }
-    };
   }
   constructor() {
     super();

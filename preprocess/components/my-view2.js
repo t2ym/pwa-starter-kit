@@ -26,10 +26,18 @@ class MyView2 extends connect(store)(PageViewElement) {
   static get importMeta() {
     return import.meta;
   }
+  static get properties() {
+    return {
+      _clicks: { type: Number },
+      _value: { type: Number }
+    };
+  }
+  static get styles() {
+    return [SharedStyles];
+  }
   render() {
     return html([
       '<!-- localizable -->',
-      '\n      ',
       '\n      <section>\n        <h2>',
       '</h2>\n        <div class="circle">',
       '</div>\n        <p><i18n-format lang="',
@@ -42,12 +50,11 @@ class MyView2 extends connect(store)(PageViewElement) {
       '">\n          </counter-element>\n        </p>\n      </section>\n    '
     ], ...bind(this, 'my-view2', (_bind, text, model, effectiveLang) => [
       _bind,
-      SharedStyles,
-      text['section_1:h2'],
+      text['section:h2'],
       this._value,
       effectiveLang,
-      text['section_1:p_2']['0'],
-      text['section_1:p_2']['1'],
+      text['section:p_2']['0'],
+      text['section:p_2']['1'],
       this._value,
       this._clicks,
       this._counterIncremented,
@@ -55,18 +62,12 @@ class MyView2 extends connect(store)(PageViewElement) {
     ], {
       'meta': {},
       'model': {},
-      'section_1:h2': 'Redux example: simple counter',
-      'section_1:p_2': [
+      'section:h2': 'Redux example: simple counter',
+      'section:p_2': [
         'This page contains a reusable {1}. The\n        element is not built in a Redux-y way (you can think of it as being a\n        third-party element you got from someone else), but this page is connected to the\n        Redux store. When the element updates its counter, this page updates the values\n        in the Redux store, and you can see the current value of the counter reflected in\n        the bubble above.',
         '&lt;counter-element&gt;'
       ]
     }));
-  }
-  static get properties() {
-    return {
-      _clicks: { type: Number },
-      _value: { type: Number }
-    };
   }
   _counterIncremented() {
     store.dispatch(increment());

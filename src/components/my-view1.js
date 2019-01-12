@@ -19,9 +19,14 @@ class MyView1 extends PageViewElement {
     return import.meta;
   }
 
+  static get styles() {
+    return [
+      SharedStyles
+    ];
+  }
+
   render() {
     return html`${bind(this, 'my-view1')}
-      ${SharedStyles}
       <section>
         <h2>Static page</h2>
         <p>This is a text-only page.</p>

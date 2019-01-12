@@ -1,17 +1,16 @@
 <!-- temporary HTML --><html><head><link rel="import" href="../../../i18n-element.html"></head><body><dom-module id="my-view404"><template localizable-text="embedded">
-      {{parts.0}}
       <section>
-        <h2>{{text.section_1:h2}}</h2>
-        <p><i18n-format lang="{{effectiveLang}}"><span>{{text.section_1:p_1.0}}</span><a href="/" slot="1">{{text.section_1:p_1.1}}</a></i18n-format></p>
+        <h2>{{text.section:h2}}</h2>
+        <p><i18n-format lang="{{effectiveLang}}"><span>{{text.section:p_1.0}}</span><a href="/" slot="1">{{text.section:p_1.1}}</a></i18n-format></p>
       </section>
     <template id="localizable-text">
 <json-data>
 {
   "meta": {},
   "model": {},
-  "section_1:h2": "Oops! You hit a 404",
-  "section_1:p_1": [
-    "The page you're looking for doesn't seem to exist. Head back\n           {1} and try again? ",
+  "section:h2": "Oops! You hit a 404",
+  "section:p_1": [
+    " The page you're looking for doesn't seem to exist. Head back\n          {1} and try again? ",
     "home"
   ]
 }

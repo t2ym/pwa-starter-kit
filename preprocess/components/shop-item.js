@@ -7,7 +7,7 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
-import { LitElement } from '@polymer/lit-element';
+import { LitElement } from 'lit-element';
 import {
   html,
   i18n,
@@ -16,6 +16,14 @@ import {
 class ShopItem extends i18n(LitElement) {
   static get importMeta() {
     return import.meta;
+  }
+  static get properties() {
+    return {
+      langUpdated: { type: String },
+      name: { type: String },
+      amount: { type: String },
+      price: { type: String }
+    };
   }
   render() {
     return html([
@@ -59,14 +67,6 @@ class ShopItem extends i18n(LitElement) {
         '{{parts.3}}'
       ]
     }));
-  }
-  static get properties() {
-    return {
-      langUpdated: { type: String },
-      name: { type: String },
-      amount: { type: String },
-      price: { type: String }
-    };
   }
   constructor() {
     super();
