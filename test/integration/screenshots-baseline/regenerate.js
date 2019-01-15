@@ -47,6 +47,12 @@ describe('🎁 regenerate screenshots', function() {
   });
 });
 
+/* async */ function sleep(interval) {
+  return new Promise(resolve => {
+    setTimeout(resolve, interval);
+  });
+}
+
 async function generateBaselineScreenshots(page) {
   const breakpoints = [
       {width: 800, height: 600},
@@ -59,14 +65,17 @@ async function generateBaselineScreenshots(page) {
     page.setViewport(breakpoints[i]);
     // Index.
     await page.goto('http://127.0.0.1:4444/');
+    await sleep(3000);
     await page.screenshot({path: `${baselineDir}/${prefix}/index.png`});
     // Views.
     for (let i = 1; i <= 3; i++) {
       await page.goto(`http://127.0.0.1:4444/view${i}`);
+      await sleep(3000);
       await page.screenshot({path: `${baselineDir}/${prefix}/view${i}.png`});
     }
     // 404.
     await page.goto('http://127.0.0.1:4444/batmanNotAView');
+    await sleep(3000);
     await page.screenshot({path: `${baselineDir}/${prefix}/batmanNotAView.png`});
   }
 }
