@@ -967,7 +967,10 @@ gulp.task('prpl-server:build', () => {
     .pipe(gulp.dest('server/build'));
 });
 
-gulp.task('prpl-server', gulp.series(
-  'prpl-server:clean',
-  'prpl-server:build'
-));
+gulp.task('prpl-server', (cb) => {
+  runSequence(
+    'prpl-server:clean',
+    'prpl-server:build',
+    cb
+  );
+});
