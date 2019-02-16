@@ -120,8 +120,8 @@ class MyView3 extends connect(store)(PageViewElement) {
       'section:p_2': 'This is a slightly more advanced Redux example, that simulates a\n          shopping cart: getting the products, adding/removing items to the\n          cart, and a checkout action, that can sometimes randomly fail (to\n          simulate where you would add failure handling). ',
       'section:p_3': [
         'This view, as well as its 2 child elements, {1} and\n        {2} are connected to the Redux store.',
-        '&lt;shop-products&gt;',
-        '&lt;shop-cart&gt;'
+        '<shop-products>',
+        '<shop-cart>'
       ],
       'section_1:h3': 'Products',
       'section_1:h3_3': 'Your Cart',
