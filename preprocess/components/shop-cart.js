@@ -15,7 +15,7 @@ import {
   html,
   i18n,
   bind
-} from 'i18n-element/i18n.js';
+} from 'i18n-element/i18n-core.js';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 import { store } from '../store.js';
 import { removeFromCartIcon } from './my-icons.js';

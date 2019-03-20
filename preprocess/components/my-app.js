@@ -15,7 +15,7 @@ import {
   html,
   i18n,
   bind
-} from 'i18n-element/i18n.js';
+} from 'i18n-element/i18n-core.js';
 import { setPassiveTouchGestures } from '@polymer/polymer/lib/utils/settings.js';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 import { installMediaQueryWatcher } from 'pwa-helpers/media-query.js';

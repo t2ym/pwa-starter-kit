@@ -10,7 +10,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 import {
   html,
   bind
-} from 'i18n-element/i18n.js';
+} from 'i18n-element/i18n-core.js';
 import { PageViewElement } from './page-view-element.js';
 import { connect } from 'pwa-helpers/connect-mixin.js';
 import { store } from '../store.js';

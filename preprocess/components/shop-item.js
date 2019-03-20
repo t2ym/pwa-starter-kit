@@ -12,7 +12,7 @@ import {
   html,
   i18n,
   bind
-} from 'i18n-element/i18n.js';
+} from 'i18n-element/i18n-core.js';
 class ShopItem extends i18n(LitElement) {
   static get importMeta() {
     return import.meta;
